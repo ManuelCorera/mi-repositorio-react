@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
+import { ItemListContainer } from './Containers/ItemListContainer'
+import {ComponenteEstados} from './ComponenteEstados'
+import {Usuarios} from './Usuarios'
 
-function App() {
+const App = () => {
+  const nombre = "Luis";
+  const mensaje = "Hola a todos los que se quedaron a los postcreditos"
+
+  const onAdd =() => {
+    console.log("agregaste algo al carrito");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar nombreUsuario={nombre} apellidoUsuario="Fernandez" />
+      <ItemListContainer greeting={mensaje} mansaje="eso es toddy la preentrega"/>
+    </>
   );
-}
+};
 
-export default App;
+export default App; //lo exporto para que lo puedan detectar los otros archivos
