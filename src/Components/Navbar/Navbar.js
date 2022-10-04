@@ -1,21 +1,19 @@
 import React from "react";
-import logo from "../../assets/logo.jpeg";
-import { CartWidget } from "../CartWidget/CartWidget";
+import logo from "../../assets/trajelogo.jpg";
 import { styles } from "./Navbar.style";
 
-const Navbar = ({ nombreUsuario, apellidoUsuario, children }) => {
-
+const Navbar = () => {
 
   const categorias = [
-    {nombre:"Categoria 1", id:0, ruta:"#"},
-    {nombre:"Categoria 2", id:1, ruta:"#"},
-    {nombre:"Categoria 3", id:2, ruta:"#"},
+    {nombre:"Camisas", id:0, ruta:"#"},
+    {nombre:"Pantalones", id:1, ruta:"#"},
+    {nombre:"Zapatos", id:2, ruta:"#"},
   ];
 
   return (
     <header style={styles.container}>
       <img style={styles.imagenes} src={logo} alt="tienda online" />
-      <h1>Bienvenido {nombreUsuario}</h1>
+      <h1>Sastreria Gutierrez</h1>
       <nav>
         {
           categorias.map((categoria)=>{
@@ -23,7 +21,6 @@ const Navbar = ({ nombreUsuario, apellidoUsuario, children }) => {
           })
         }
       </nav>
-      <CartWidget />
     </header>
   );
 };
