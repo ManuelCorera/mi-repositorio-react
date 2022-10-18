@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/trajelogo.jpg";
 import { styles } from "./Navbar.style";
+import { CartWidget } from "../CartWidget/CartWidget";
 
 const Navbar = () => {
 
@@ -21,6 +22,8 @@ const Navbar = () => {
           })
         }
       </nav>
+        <CartWidget />
+
     </header>
   );
 };

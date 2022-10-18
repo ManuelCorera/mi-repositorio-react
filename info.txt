@@ -1,0 +1,19 @@
+Componentes Funcionales
+-Importar react(opcional)
+-Debe tener una funcion
+-El nombre de la funcion debe empezar con mayusculas SIEMPRE
+-La funcion debe retornar algo(siempre debe ser un solo elemento padre)
+-Se debe exportar la funcion
+
+
+Componentes 
+-Props
+-States
+-Ciclo de vida
+-Metodos del ciclo de vida
+
+hooks
+-Siempre comienzan con use
+-Siempre se declaran dentro de un Componentes
+-Son Funciones
+-No se pueden declarar en condicionales(if)
