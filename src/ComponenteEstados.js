@@ -4,6 +4,7 @@ export const ComponenteEstados = ({stock, initial, onAdd}) => {
 
   const [contador, setContador] = useState(1);
 
+
   const handlerClickSumar = () => {
     setContador(contador + 1);
   };
@@ -18,7 +19,6 @@ export const ComponenteEstados = ({stock, initial, onAdd}) => {
 
   return (
     <div>
-      <h1>Componente para los estados</h1>
       <h1>{contador}</h1>
       <button onClick={handlerClickSumar}>Sumar</button>
       <button onClick={handlerClickRestar}>Restar</button>

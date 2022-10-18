@@ -1,26 +1,29 @@
+
 import React from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
-import { ItemListContainer } from './Containers/ItemListContainer'
-import {ComponenteEstados} from './ComponenteEstados'
-import {Usuarios} from './Usuarios'
+import { ItemListContainer } from "./Containers/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./Containers/ItemDetailContainer/ItemDetailContainer";
+import { Cart } from "./Containers/CartView/Cart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
-
-  const mensaje = "Bienvenido a Nuestra Tienda Virtual"
-
-const onAdd =()=> {
-  console.log("agregaste algo al carrito");
-}
+  const mensaje = "Bienvenido a Nuestra Tienda Virtual";
 
   return (
     <>
-    <Navbar/>
-    <ItemListContainer greeting={mensaje}/>
-    <Usuarios/>
-    <ComponenteEstados stock={5} initial={1} onAdd={onAdd}/>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting={mensaje} />}/>
+          <Route path="/categoria/:id" element={<ItemListContainer greeting={mensaje} />}/>
+          <Route path="/producto/:id" element={<ItemDetailContainer />}/>
+          <Route path="/cart" element={<Cart />}/>
+          <Route path="*" element={<ItemListContainer />}/>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
 
-export default App; //lo exporto para que lo puedan detectar los otros archivos
+export default App;

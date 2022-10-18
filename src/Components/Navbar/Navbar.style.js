@@ -16,7 +16,7 @@ const viewport = {
       },
       categorias: {
         margin: 10,
-        color: 'red',
+        color: 'black',
         textDecoration: "none",
       },
     };

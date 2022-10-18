@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 
 export const Usuarios = () => {
   const [usuarios, setUsuarios] = useState([
@@ -23,4 +23,4 @@ export const Usuarios = () => {
       ))}
     </div>
   );
-};
+};*/
