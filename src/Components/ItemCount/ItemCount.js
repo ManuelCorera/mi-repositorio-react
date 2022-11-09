@@ -15,12 +15,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
   };
 
-
   return (
     <div>
-      <button onClick={subtract}>-</button> {/* agregamos evento con callback al boton restar */}
+      <button onClick={subtract}>-</button>
       <h2>{count}</h2>
-      <button onClick={add}>+</button> {/* agregamos evento con callback al boton sumar */}
+      <button onClick={add}>+</button>
       <button disabled={stock === 0} onClick={()=>onAdd(count)}>
         <span>{stock === 0 ? 'No tenemos stock' : 'Agrega al carrito'}</span>
       </button>
