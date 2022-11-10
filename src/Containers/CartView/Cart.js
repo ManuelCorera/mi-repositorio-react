@@ -6,19 +6,19 @@ import { db } from "../../firebase/firebase";
 import { collection, addDoc, serverTimestamp, doc, updateDoc } from "firebase/firestore"
 
 export const Cart = ({ estilo, color }) => {
-  const { cart, total, clear } = useContext(Context);
+  const { cart, totalCompra, clear } = useContext(Context);
 
   const comprador = {
-    nombre: 'Gaston',
-    apellido: 'Rodri',
-    email: 'tonga@tonga.com'
+    nombre: 'user',
+    apellido: 'username',
+    email: 'user@user.com'
   };
 
   const finalizarCompra = ()=>{
     const ventasCollection = collection(db,"ventas");
     addDoc(ventasCollection,{
       comprador,
-      items:[{nombre:'banana'},{nombre:'pera'}],
+      items:[{nombre:'{producto.id}'}],
       total: 200,
       date:serverTimestamp()
     })
@@ -34,8 +34,8 @@ export const Cart = ({ estilo, color }) => {
   }
 
   const actualizarStock = ()=>{
-    const updateStock = doc(db, "productos","KwnjSlyDslt1IneySzVr")
-    updateDoc(updateStock,{stock:100})
+    const updateStock = doc(db, "productos","zy4kgnX86d2LTgs0iETV")
+    updateDoc(updateStock,{stock:50})
   }
 
 
@@ -43,19 +43,18 @@ export const Cart = ({ estilo, color }) => {
     <>
       {cart.length === 0 ? (
         <>
-          <h1 className={estilo ? "red" : "green"}>
-            No agregaste productos aun, puedes ir <Link to="/">ACA</Link>
-          </h1>
-          <h2 className={`tamanio ${color || ''}`}>Gracias por tu visita</h2>
+          <p>
+            No agregaste productos aun, <Link to="/">haz click aqui</Link> para ver nuestro catálogo.
+          </p>
         </>
       ) : (
         <>
           {cart.map((producto) => (
             <h1 key={producto.id}>{producto.title}</h1>
           ))}
+      <button onClick={finalizarCompra}>Finalizar compra</button>
         </>
       )}
-      <button onClick={actualizarStock}>finalizar compra</button>
     </>
   );
 };

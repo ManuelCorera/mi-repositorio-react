@@ -3,13 +3,15 @@ import logo from "../../assets/trajelogo.jpg";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { styles } from "./Navbar.style";
 import { Link, NavLink } from "react-router-dom";
+import "./Navbar.css";
+
 
 const Navbar = () => {
   const categorias = [
-    { nombre: "Camisas", id: 0, ruta: "/category/jewelery" },
-    { nombre: "Abrigos", id: 1, ruta: "/category/electronics" },
-    { nombre: "Pantalones", id: 2, ruta: "/category/men's clothing" },
-    { nombre: "Calzado", id: 3, ruta: "/category/women's clothing" },
+    { nombre: "Corbatas", id: 0, ruta: "/category/jewelery" },
+    { nombre: "Boinas", id: 1, ruta: "/category/electronics" },
+    { nombre: "Carteras", id: 2, ruta: "/category/men's clothing" },
+    { nombre: "Habanos", id: 3, ruta: "/category/women's clothing" },
   ];
 
   return (

@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
@@ -9,8 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CustomProvider } from "./Context/CustomContext";
 
 const App = () => {
-  const mensaje = "Bienvenido a Nuestra Tienda Virtual";
-
+  const mensaje = "Catálogo";
+  
   return (
     <>
       <BrowserRouter>

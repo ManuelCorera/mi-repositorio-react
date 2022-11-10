@@ -31,8 +31,8 @@ useEffect(() => {
     console.log(error);
   })
   .finally(setLoading(false));
-
-    /*const getProducts = async () => {
+/*
+  const getProducts = async () => {
       try {
         const res = await fetch(id ? URL_CAT : URL_BASE);
         const data = await res.json();
@@ -45,7 +45,7 @@ useEffect(() => {
     };
     getProducts()*/
 
-  },[id, URL_BASE, URL_CAT, productCollection]); 
+},[id, URL_BASE, URL_CAT, productCollection]); 
   return (
     <>
       <h2>{greeting}</h2>

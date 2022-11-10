@@ -15,6 +15,7 @@ const viewport = {
         height: "90%",
       },
       categorias: {
+        fontStyle: 'italic',
         margin: 10,
         color: 'black',
         textDecoration: "none",
